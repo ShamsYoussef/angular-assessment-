@@ -1,0 +1,87 @@
+.userCard{
+    background-color: #FFF;
+     padding: 10px;
+      margin-bottom: 2rem;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      
+    }
+  
+  .myAvatar /deep/ .avatar-content {
+      box-shadow: -1px 3px 19px -8px rgba(133,130,133,1);
+  }
+  
+  .editIcon{
+  background-color: #FFF;
+  border: 1px solid #0592c1;
+  color: #0592c1;
+  height: auto;
+  height: fit-content;
+    border-radius: 20px;
+    padding: 5px;
+    position: relative;
+    right: 25px;
+    top: 15px;
+    font-size: 20px;
+  }
+  
+  .editIcon:hover{
+  cursor: pointer;
+  font-size: 25px;
+  }
+  .deleteIcon{
+  color: #af0202;
+  }
+  
+  .myAvatar{
+  margin-bottom: 15px !important;
+  margin-top: 1rem;
+  }
+  .avatarContainer{
+  display: flex;
+    flex-direction: row;
+    position: relative;
+    left: 13px;
+    max-width: 125px;
+  }
+  .nameText.ana{
+  color: #0592c1 !important;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: .5rem !important;
+  border: 1px solid rgb(255, 194, 27);
+  padding: 10px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  }
+  .row{
+  /* justify-content: space-around; */
+  }
+  
+  .jumbotron{
+  background-color:rgba(214, 214, 214, 0.171);
+  padding: 0rem 2rem !important;
+  }
+  
+  .controls{
+  margin-top: 1rem;
+    align-items: center;
+    display: flex;
+  }
+  
+  .infoContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  }
+.spinner{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-bottom: 1rem;
+}
+

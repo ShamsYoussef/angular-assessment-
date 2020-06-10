@@ -1,0 +1,45 @@
+<div class="container-fluid formContainer">
+    <form class="row " #form="ngForm" autocomplete="off">
+        <input type="hidden" name="id" #id="ngModel" [(ngModel)]="usersService.formData.id">
+        <div class="form-group col-lg-2 col-md-5">
+            <input class="input" name="First Name" #firstName="ngModel" [(ngModel)]="usersService.formData.first_name"
+                class="form-control" placeholder="First Name" required>
+            <div *ngIf="firstName.invalid && firstName.touched" class="validation-error">First Name is required.
+            </div>
+        </div>
+
+        <div class="form-group col-lg-2 col-md-5">
+            <input class="input" name="Last Name" #lastName="ngModel" [(ngModel)]="usersService.formData.last_name"
+                class="form-control" placeholder="last Name" required>
+            <div *ngIf="lastName.invalid && lastName.touched" class="validation-error">Last Name is required.</div>
+        </div>
+
+        <div class="form-group col-lg-4 col-md-5">
+            <input class="input" name="Email" #email="ngModel" [(ngModel)]="usersService.formData.email"
+                class="form-control" placeholder="email" required>
+            <div *ngIf="email.invalid && email.touched" class="validation-error">Email is required.</div>
+        </div>
+
+        <div class="form-group col-md-auto ">
+            <button type="submit" (click)="onSubmit(form)" [disabled]="form.invalid"
+                class="btn btn-lg btn-block btn-info">SUBMIT</button>
+            <!-- <button type="submit"  class="btn btn-lg btn-block btn-info">delete</button> -->
+        </div>
+
+        <div [hidden]="form.invalid || form.value.id == null" (click)="deleteUserHandler(form)"
+            class=" col-sm-1 deleteIcon">
+            <span class="material-icons">
+                delete
+            </span>
+        </div>
+
+    </form>
+    <div *ngIf="loading" class="spinner">
+        <mat-progress-spinner mode="indeterminate" diameter="20"></mat-progress-spinner>
+    </div>
+</div>
+
+
+
+
+<ngx-alerts></ngx-alerts>

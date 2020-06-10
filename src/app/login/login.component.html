@@ -1,0 +1,65 @@
+<!-- <div *ngIf="error" class="alert alert-danger">{{error}}</div> -->
+<div class="container-fluid loginContainer">
+
+    <div class="wrapContainer">
+
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+            <span class="logo">
+                <img src="../../assets/A1Logo.svg">
+            </span>
+
+            <span class="loginTitle p-b-34 p-t-27">
+                Log in
+            </span>
+
+            <div class="form-group input-group">
+                <div class="inputContainer">
+                    <span class="material-icons inputIcon" style="color:#cccccc">
+                        person
+                    </span>
+                    <input type="text" formControlName="username" class=" input form-control" placeholder="Username"
+                        [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+                </div>
+                <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                    <div *ngIf="f.username.errors.required">Username is required</div>
+                </div>
+            </div>
+
+            <div class="form-group input-group">
+                <div class="inputContainer">
+                    <span class="material-icons inputIcon" style="color:#cccccc">
+                        lock
+                    </span>
+                    <input type="password" formControlName="password" class="input form-control" placeholder="Password"
+                        [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                </div>
+                <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                    <div *ngIf="f.password.errors.required">Password is required</div>
+                </div>
+            </div>
+
+            <div class="form-group checkboxContainer">
+                <input type="checkbox"/>
+                <span class="rememberText">Remember Me</span>
+            </div>
+
+            <div class="form-group login-btn">
+                <button [disabled]="loading" class="loginButton btn btn-primary">
+                    <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                    Login
+                </button>
+                <div *ngIf="loading" class="spinner">
+                    <mat-progress-spinner  mode="indeterminate" diameter="20"></mat-progress-spinner>
+                  </div>
+            </div>
+
+          
+
+            <p class="forgetText">Forgot Password?</p>
+        </form>
+    </div>
+
+</div>
+
+<ngx-alerts></ngx-alerts>

@@ -1,0 +1,53 @@
+.title{
+    margin-bottom: 1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+input.ng-invalid.ng-touched{
+    border-color: rgb(219, 10, 10) !important;
+}
+
+.validation-error{
+    color: rgb(219, 10, 10) ;
+    font-size: small;
+}
+
+.row{
+    padding-top: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+input{
+    border-radius: 20px !important;
+}
+
+.btn{
+    border-radius: 20px !important;
+    font-size: initial;
+
+}
+
+.form-group{
+    min-height: 57px !important;
+}
+
+.deleteIcon{
+    position: relative;
+    bottom: 13px;
+    color: rgb(199, 5, 5);
+    right: 15px;
+}
+.deleteIcon:hover{
+    cursor: pointer;
+}
+.formContainer{
+    background-color:rgba(214, 214, 214, 0.171);
+}
+
+.spinner{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding-bottom: 1rem;
+  }
